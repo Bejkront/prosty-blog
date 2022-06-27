@@ -1,0 +1,48 @@
+{% extends "baza.html" %} {% block title %}Rejestracja konta{% endblock %} {% block
+content %}
+<form method="POST">
+  <h3 align="center">Zarejestruj</h3>
+  <div class="form-group m-3">
+  <div class="mb-4">
+    <label class="m-1" for="username">Nazwa użytkownika</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      class="form-control"
+      placeholder="Podaj nazwę użytkownika"
+    />
+	</div>
+	  <div class="mb-4">
+    <label class="m-1" for="email">Adres Email</label>
+    <input
+      type="text"
+      id="email"
+      name="email"
+      class="form-control"
+      placeholder="Podaj email"
+    />
+	</div>
+    <label class="m-1"  for="password1"> Podaj hasło</label>
+    <input
+      type="password"
+      id="password1"
+      name="password1"
+      class="form-control"
+      placeholder="Podaj hasło"
+    />
+    <label class="m-1"  for="password2">Powtórz hasło</label>
+    <input 
+      type="password"
+      id="password2"
+      name="password2"
+      class="form-control"
+      placeholder="Powtórz hasło"
+    />
+    <br />
+    <div align="center">
+      <button class="btn  btn-lg btn-secondary" type="submit">Zarejestruj</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

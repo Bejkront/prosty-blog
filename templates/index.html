@@ -1,0 +1,32 @@
+{% extends "baza.html" %}
+
+{% block content %}
+{% if current_user.is_anonymous %}
+
+<h2>Witaj na moim blogu !</h2><br>
+
+<p>
+Możesz czytać posty, komentarze ale nie możesz dodawać komentarzy przed założeniem konta
+
+</p>
+</br>
+<a class="btn btn-secondary form-control" href="/blog"><b>Blog</b></a><br><br>
+<a class="btn btn-secondary form-control" href="/login"><b>Zaloguj się</b></a><br><br>
+<a class="btn btn-success form-control"  href="/signup"><b>Zarejestruj się</b></a>
+
+{% endif %}
+
+
+{% if current_user.is_authenticated %}
+
+<div class="border border-primary mt-5 p-3">
+     <h2><p> Witamy {{ current_user.username }} !</p></h2><br>
+
+<a class="btn btn-secondary form-control"  href="/blog"><b>Blog</b></a><br><br>
+<a class="btn btn-info form-control"  href="/dodaj-post"><b>Dodaj nowy post</b></a><br><br>
+<a class="btn btn-danger form-control"  href="/logout"><b>Wyloguj się</b></a>
+
+</div>
+{% endif %}
+
+{% endblock %}

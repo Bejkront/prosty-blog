@@ -1,0 +1,24 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+    <main role="main" class="container">
+
+    <h1><p class="m-5"> {{tytul}}</p></h1>
+
+<form action = "{{ url_for('delpost') }}" method = "POST">
+ <div class="form-group">
+                <input type="number" name="id" min="1" placeholder="Podaj numer posta do usunięcia..." class="form-control" required>
+            </div>
+
+ <div class="form-group">
+                <button type="submit" class="btn btn-block btn-dark mybtn">Usuń post!</button>
+
+            </div>
+
+ </form>
+
+
+    </main>
+
+{% endblock %}

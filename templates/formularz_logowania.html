@@ -1,0 +1,24 @@
+{% extends "baza.html" %}
+
+{% block content %}
+
+    <main role="main" class="container">
+<h1><p>Zaloguj się na swoje konto</p></h1>
+
+ <form action="/login" method="POST" class="form-group">
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Haslo" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-success">Zaloguj</button>
+                <a href="/signup" class="btn btn-block btn-secondary  mybtn link">Zarejestruj</a>
+            </div>
+            </form>
+
+    </main><!-- /.container -->
+
+  {% endblock %}
